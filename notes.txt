@@ -1,0 +1,12 @@
+1- sudo systemctl start jenkins - to start the jenkins now copy the ipv4 and :8080 UI will open
+2 - check the status of jenkins - sudo systemctl status jenkins
+3 - to connect jenkins with github when we give url we need to give password also so that time we can create ssh key on server ubuntu using command(ssh-keygen) it will create key in -> .ssh/ with some idname with extention .pub and without .pub. public key is with .pub extention.
+4 - go to github account in ssh key in settinges add new ssh key and copy paste public key from server which we created before now git hub can connect to server on jenkins
+5 - and wihout .pub extention is private key you need to paste this in jenkins while adding password in key field
+6 -write docker file in docker file weinstall node js then we copy all code to container then we create directoary then install npm then we run the node js code
+7 - build image for container then run the conatine all command in other file
+8 - pipeline name is to-do-node-js which is created from jenkins location is - /var/lib/jenkins/workspace/to-do-node-js here we created docke image and container command all store in other file
+9 - now webhook if anything change in github then automatically it will change in pipeline
+10 - u have to install plugins in jenkins in -> manage jenkins -> then -> available plugins -> add github integration
+11 - add webhook in repo setting add jenkins ipv4:8080/webhook
+~
